@@ -1,0 +1,15 @@
+#!/bin/bash
+set -e
+
+#DEBHELPER#
+
+if [ -n "$2" ]; then
+  echo "Performing Monica update..."
+  pushd /usr/share/monica
+  php artisan monica:update --force
+  popd
+fi
+
+chown -R www-data:www-data /usr/share/monica
+find /usr/share/monica -type f -exec chmod 664 {} \;
+find /usr/share/monica -type d -exec chmod 775 {} \;

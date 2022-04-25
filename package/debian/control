@@ -1,0 +1,29 @@
+Source: monica
+Section: web
+Priority: optional
+Maintainer: cheasles <cheasles@github.com>
+Build-Depends: debhelper-compat (= 13)
+Standards-Version: 4.5.1
+Homepage: https://www.monicahq.com/
+Vcs-Git: https://github.com/monicahq/monica.git
+Vcs-Browser: https://github.com/monicahq/monica
+Rules-Requires-Root: no
+
+Package: monica
+Architecture: all
+Depends: ${misc:Depends}
+Description: Monica Personal CRM. Remember everything about your friends, family and business relationships. 
+Recommends:
+  php,
+  php-bcmath,
+  php-curl,
+  php-gd,
+  php-gmp,
+  php-intl,
+  php-mbstring,
+  php-mysql,
+  php-xml,
+  php-zip
+Suggests:
+  apache | nginx,
+  php-redis

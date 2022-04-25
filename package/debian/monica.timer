@@ -1,0 +1,8 @@
+[Unit]
+Description=Timer for periodic execution of monica-mail service.
+
+[Timer]
+OnCalendar=*-*-* *:*:00
+
+[Install]
+WantedBy=timers.target
